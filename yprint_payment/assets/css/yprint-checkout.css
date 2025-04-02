@@ -1,0 +1,946 @@
+/**
+ * YPrint Checkout - Specific CSS
+ *
+ * Diese Datei enthält alle spezifischen Checkout-Styles, die über die 
+ * allgemeinen Styles in yprint-payment.css hinausgehen. Sie konzentriert 
+ * sich auf den Checkout-Fluss und die spezifischen Komponenten.
+ *
+ * @package YPrint_Payment
+ * @since 1.0.0
+ */
+
+/* ----- Checkout Container ----- */
+.yprint-checkout-wrapper {
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    padding: 40px 0;
+}
+
+.yprint-checkout-container {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.yprint-checkout-header {
+    padding: 25px 30px;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.yprint-checkout-header h1 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+    color: #1d1d1f;
+}
+
+.yprint-checkout-logo {
+    height: 40px;
+    display: block;
+}
+
+.yprint-checkout-progress {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.yprint-checkout-step {
+    display: flex;
+    align-items: center;
+    margin: 0 15px;
+    color: #6e6e73;
+    font-size: 14px;
+}
+
+.yprint-checkout-step.active {
+    color: #0079FF;
+    font-weight: 500;
+}
+
+.yprint-checkout-step-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: #f5f5f7;
+    color: #6e6e73;
+    margin-right: 10px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.yprint-checkout-step.active .yprint-checkout-step-number {
+    background-color: #0079FF;
+    color: white;
+}
+
+.yprint-checkout-step.completed .yprint-checkout-step-number {
+    background-color: #34c759;
+    color: white;
+}
+
+.yprint-checkout-step.completed .yprint-checkout-step-number::after {
+    content: "✓";
+}
+
+.yprint-checkout-main {
+    padding: 30px;
+}
+
+/* ----- Form Layouts & Sections ----- */
+.yprint-checkout-section {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.yprint-checkout-section.collapsed {
+    max-height: 60px;
+    overflow: hidden;
+}
+
+.yprint-section-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.yprint-section-header .yprint-section-icon {
+    width: 32px;
+    height: 32px;
+    background-color: #f0f6ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    color: #0079FF;
+    font-size: 16px;
+}
+
+.yprint-section-header .yprint-section-number {
+    width: 28px;
+    height: 28px;
+    background-color: #0079FF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.yprint-section-header .yprint-section-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.yprint-section-header .yprint-section-edit {
+    color: #0079FF;
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.yprint-checkout-section.completed:hover .yprint-section-edit {
+    opacity: 1;
+}
+
+.yprint-section-header .yprint-section-status {
+    background-color: #f5f5f7;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    color: #6e6e73;
+    margin-left: 15px;
+}
+
+.yprint-section-header .yprint-section-status.active {
+    background-color: #e3f2fd;
+    color: #0079FF;
+}
+
+.yprint-section-header .yprint-section-status.completed {
+    background-color: #e8f5e9;
+    color: #43a047;
+}
+
+.yprint-section-header .yprint-section-toggle {
+    margin-left: 10px;
+    color: #6e6e73;
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+}
+
+.yprint-checkout-section.collapsed .yprint-section-toggle {
+    transform: rotate(180deg);
+}
+
+.yprint-section-content {
+    padding-left: 47px; /* Align with section title */
+}
+
+/* ----- Responsive Layout Overrides ----- */
+@media (min-width: 992px) {
+    .yprint-checkout-columns {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 30px;
+    }
+
+    .yprint-checkout-left {
+        flex: 3;
+        padding-right: 30px;
+        border-right: 1px solid #f0f0f0;
+    }
+
+    .yprint-checkout-right {
+        flex: 2;
+        min-width: 320px;
+        position: sticky;
+        top: 30px;
+        align-self: flex-start;
+    }
+}
+
+@media (max-width: 991px) {
+    .yprint-checkout-columns {
+        flex-direction: column-reverse;
+    }
+    
+    .yprint-checkout-left, 
+    .yprint-checkout-right {
+        width: 100%;
+    }
+    
+    .yprint-checkout-right {
+        margin-bottom: 30px;
+    }
+}
+
+/* ----- Address Section Enhancements ----- */
+.yprint-address-selector {
+    margin-bottom: 25px;
+}
+
+.yprint-address-slots {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.yprint-address-slot {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.2s ease;
+}
+
+.yprint-address-slot.active {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 121, 255, 0.1);
+}
+
+.yprint-address-actions {
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.yprint-address-action {
+    background: none;
+    border: none;
+    color: #0079FF;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 5px;
+}
+
+.yprint-address-action:hover {
+    text-decoration: underline;
+}
+
+.yprint-address-action.delete {
+    color: #dc3545;
+}
+
+.yprint-new-slot {
+    background-color: #f5f9ff;
+    border: 2px dashed #b3d7ff;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+    height: 100%;
+}
+
+.yprint-new-slot:hover {
+    background-color: #eaf5ff;
+}
+
+.yprint-new-slot .yprint-slot-icon {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #0079FF;
+}
+
+/* ----- Payment Options Enhancements ----- */
+.yprint-payment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 15px;
+}
+
+.yprint-payment-option {
+    position: relative;
+    height: 100%;
+    transition: all 0.2s ease;
+    overflow: visible;
+}
+
+.yprint-payment-option.selected {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 121, 255, 0.1);
+}
+
+.yprint-payment-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #34c759;
+    color: white;
+    font-size: 11px;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.yprint-payment-option.selected .yprint-payment-description {
+    max-height: 200px;
+    opacity: 1;
+    margin-top: 15px;
+    transition: max-height 0.3s ease, opacity 0.3s ease, margin-top 0.3s ease;
+}
+
+.yprint-payment-description {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease, opacity 0.2s ease, margin-top 0.2s ease;
+}
+
+.yprint-payment-fields {
+    padding-top: 15px;
+    margin-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+/* Credit card field styles */
+.yprint-card-element {
+    padding: 12px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.yprint-card-element:focus {
+    border-color: #0079FF;
+    box-shadow: 0 0 0 2px rgba(0, 121, 255, 0.1);
+    outline: none;
+}
+
+.yprint-card-element.invalid {
+    border-color: #dc3545;
+}
+
+.yprint-payment-secure-badge {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    color: #6e6e73;
+    font-size: 13px;
+}
+
+.yprint-payment-secure-badge svg {
+    width: 14px;
+    height: 14px;
+    margin-right: 6px;
+    color: #34c759;
+}
+
+/* SEPA-specific form styles */
+.yprint-sepa-mandate {
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 6px;
+    font-size: 13px;
+    color: #6e6e73;
+}
+
+.yprint-sepa-mandate-title {
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+/* ----- Order Summary Enhancements ----- */
+.yprint-order-summary {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.yprint-summary-title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.yprint-summary-edit {
+    font-size: 14px;
+    color: #0079FF;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.yprint-summary-edit:hover {
+    text-decoration: underline;
+}
+
+.yprint-order-item {
+    background-color: white;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    padding: 12px;
+    position: relative;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.yprint-item-promo-badge {
+    position: absolute;
+    top: -8px;
+    left: 8px;
+    background-color: #ff3b30;
+    color: white;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-weight: 500;
+}
+
+.yprint-item-quantity-wrapper {
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+}
+
+.yprint-item-quantity-btn {
+    width: 28px;
+    height: 28px;
+    background-color: #f5f5f7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.2s ease;
+}
+
+.yprint-item-quantity-btn:hover {
+    background-color: #e5e5ea;
+}
+
+.yprint-item-quantity-value {
+    width: 32px;
+    text-align: center;
+    font-weight: 500;
+    user-select: none;
+}
+
+.yprint-subtotal, 
+.yprint-shipping,
+.yprint-tax,
+.yprint-discount,
+.yprint-total {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.yprint-subtotal span, 
+.yprint-shipping span,
+.yprint-tax span,
+.yprint-discount span {
+    color: #6e6e73;
+}
+
+.yprint-total {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #e0e0e0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.yprint-discount {
+    color: #34c759;
+}
+
+.yprint-coupon-form {
+    margin-top: 20px;
+}
+
+.yprint-coupon-toggle {
+    color: #0079FF;
+    font-size: 14px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.yprint-coupon-toggle svg {
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+}
+
+.yprint-coupon-toggle:hover {
+    text-decoration: underline;
+}
+
+.yprint-coupon-input-wrapper {
+    margin-top: 15px;
+    display: none;
+}
+
+.yprint-coupon-input-wrapper.active {
+    display: flex;
+}
+
+/* ----- Buy Button & Final Section ----- */
+.yprint-buy-section {
+    margin-top: 30px;
+}
+
+.yprint-checkbox-group {
+    margin-bottom: 20px;
+}
+
+.yprint-checkbox-group label {
+    font-size: 14px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.yprint-checkbox-group input[type="checkbox"] {
+    margin-right: 10px;
+    margin-top: 3px;
+}
+
+.yprint-buy-button {
+    width: 100%;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    background-color: #0079FF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.yprint-buy-button:hover {
+    background-color: #0068e1;
+}
+
+.yprint-buy-button:active {
+    transform: scale(0.98);
+}
+
+.yprint-buy-button svg {
+    margin-left: 8px;
+}
+
+.yprint-buy-button.loading {
+    background-color: #0079FF;
+    cursor: wait;
+}
+
+.yprint-secure-checkout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    color: #6e6e73;
+    font-size: 13px;
+}
+
+.yprint-secure-checkout svg {
+    width: 14px;
+    height: 14px;
+    margin-right: 6px;
+    color: #34c759;
+}
+
+.yprint-payment-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.yprint-payment-icon-img {
+    height: 24px;
+    opacity: 0.5;
+}
+
+/* ----- Animations & Effects ----- */
+@keyframes yprint-pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes yprint-fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.yprint-animate-pulse {
+    animation: yprint-pulse 2s infinite;
+}
+
+.yprint-fade-in {
+    animation: yprint-fade-in 0.3s forwards;
+}
+
+/* ----- Loading States ----- */
+.yprint-loading-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    border-radius: inherit;
+}
+
+.yprint-loading-spinner {
+    width: 30px;
+    height: 30px;
+    border: 3px solid rgba(0, 121, 255, 0.2);
+    border-top-color: #0079FF;
+    border-radius: 50%;
+    animation: yprint-spin 1s linear infinite;
+}
+
+/* ----- Tooltips ----- */
+.yprint-tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.yprint-tooltip .yprint-tooltip-text {
+    visibility: hidden;
+    width: 200px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -100px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 12px;
+    line-height: 1.4;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.yprint-tooltip .yprint-tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+}
+
+.yprint-tooltip:hover .yprint-tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* ----- Error States ----- */
+.yprint-form-row input.error,
+.yprint-form-row select.error {
+    border-color: #ff3b30;
+    background-color: #fff5f5;
+}
+
+.yprint-field-error {
+    color: #ff3b30;
+    font-size: 12px;
+    margin-top: 5px;
+    display: none;
+}
+
+.yprint-field-error.visible {
+    display: block;
+    animation: yprint-fade-in 0.3s forwards;
+}
+
+.yprint-validation-feedback {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #fff5f5;
+    border: 1px solid #ffcdd2;
+    color: #d32f2f;
+    display: none;
+}
+
+.yprint-validation-feedback.visible {
+    display: block;
+    animation: yprint-fade-in 0.3s forwards;
+}
+
+.yprint-validation-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.yprint-validation-item:last-child {
+    margin-bottom: 0;
+}
+
+.yprint-validation-item::before {
+    content: "•";
+    margin-right: 8px;
+}
+
+/* ----- Modal Styles ----- */
+.yprint-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.yprint-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.yprint-modal-content {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    width: 90%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+.yprint-modal.active .yprint-modal-content {
+    transform: translateY(0);
+}
+
+.yprint-modal-header {
+    padding: 20px;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.yprint-modal-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.yprint-modal-close {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #6e6e73;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.2s ease;
+}
+
+.yprint-modal-close:hover {
+    background-color: #f5f5f7;
+}
+
+.yprint-modal-body {
+    padding: 20px;
+}
+
+.yprint-modal-footer {
+    padding: 15px 20px;
+    border-top: 1px solid #f0f0f0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.yprint-modal-btn {
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.yprint-modal-btn-secondary {
+    background-color: #f5f5f7;
+    color: #1d1d1f;
+    border: none;
+}
+
+.yprint-modal-btn-secondary:hover {
+    background-color: #e5e5ea;
+}
+
+.yprint-modal-btn-primary {
+    background-color: #0079FF;
+    color: white;
+    border: none;
+}
+
+.yprint-modal-btn-primary:hover {
+    background-color: #0068e1;
+}
+
+/* ----- Responsive Adjustments ----- */
+@media (max-width: 768px) {
+    .yprint-checkout-main {
+        padding: 20px;
+    }
+    
+    .yprint-checkout-header {
+        padding: 15px 20px;
+    }
+    
+    .yprint-checkout-header h1 {
+        font-size: 20px;
+    }
+    
+    .yprint-checkout-logo {
+        height: 30px;
+    }
+    
+    .yprint-section-content {
+        padding-left: 0;
+    }
+    
+    .yprint-checkout-step {
+        font-size: 12px;
+        margin: 0 10px;
+    }
+    
+    .yprint-checkout-step-number {
+        width: 24px;
+        height: 24px;
+        font-size: 12px;
+    }
+    
+    .yprint-address-slots,
+    .yprint-payment-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .yprint-order-summary {
+        padding: 15px;
+    }
+    
+    .yprint-modal-content {
+        width: 95%;
+    }
+}
+
+/* ----- Print Styles ----- */
+@media print {
+    .yprint-checkout-wrapper {
+        background-color: white;
+        padding: 0;
+    }
+    
+    .yprint-checkout-container {
+        box-shadow: none;
+    }
+    
+    .yprint-checkout-progress,
+    .yprint-checkout-logo,
+    .yprint-back-button-container,
+    .yprint-buy-section,
+    .yprint-coupon-form,
+    .yprint-payment-options,
+    .yprint-section-edit,
+    .yprint-section-toggle {
+        display: none !important;
+    }
+    
+    .yprint-checkout-section {
+        break-inside: avoid;
+    }
+}

@@ -1,0 +1,1179 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: YPrint Payment 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/yprint-payment\n"
+"POT-Creation-Date: 2023-11-15T12:00:00+00:00\n"
+"PO-Revision-Date: 2023-11-15T12:00:00+00:00\n"
+"Last-Translator: YPrint Team <info@yprint.de>\n"
+"Language-Team: YPrint <info@yprint.de>\n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: WP-CLI 2.7.1\n"
+"X-Domain: yprint-payment\n"
+
+#. Plugin Name of the plugin
+msgid "YPrint Payment"
+msgstr "YPrint Payment"
+
+#. Plugin URI of the plugin
+msgid "https://yprint.de"
+msgstr "https://yprint.de"
+
+#. Description of the plugin
+msgid "Custom payment system for YPrint with advanced Stripe and PayPal integration"
+msgstr "Benutzerdefiniertes Zahlungssystem für YPrint mit erweiterter Stripe- und PayPal-Integration"
+
+#. Author of the plugin
+msgid "YPrint"
+msgstr "YPrint"
+
+#. Author URI of the plugin
+msgid "https://yprint.de"
+msgstr "https://yprint.de"
+
+#: yprint-payment.php:94
+msgid "This plugin requires WooCommerce to function. Please install and activate WooCommerce."
+msgstr "Dieses Plugin benötigt WooCommerce, um zu funktionieren. Bitte installieren und aktivieren Sie WooCommerce."
+
+#: class-yprint-payment.php:124
+msgid "YPrint Payment requires WooCommerce to function. Please install and activate WooCommerce."
+msgstr "YPrint Payment benötigt WooCommerce, um zu funktionieren. Bitte installieren und aktivieren Sie WooCommerce."
+
+#: class-yprint-admin.php:180
+msgid "General"
+msgstr "Allgemein"
+
+#: class-yprint-admin.php:181
+msgid "General Settings"
+msgstr "Allgemeine Einstellungen"
+
+#: class-yprint-admin.php:193
+msgid "Shop Name"
+msgstr "Shop-Name"
+
+#: class-yprint-admin.php:198
+msgid "Used in emails and payment pages."
+msgstr "Wird in E-Mails und auf Zahlungsseiten angezeigt."
+
+#: class-yprint-admin.php:205
+msgid "Thank You Page"
+msgstr "Danke-Seite"
+
+#: class-yprint-admin.php:213
+msgid "Use default thank you page"
+msgstr "Standard-Dankeseite verwenden"
+
+#: class-yprint-admin.php:217
+msgid "Page that customer is redirected to after successful payment."
+msgstr "Seite, auf die der Kunde nach erfolgreicher Zahlung weitergeleitet wird."
+
+#: class-yprint-admin.php:219
+msgid "View page"
+msgstr "Seite anzeigen"
+
+#: class-yprint-admin.php:229
+msgid "Debug Mode"
+msgstr "Debug-Modus"
+
+#: class-yprint-admin.php:234
+msgid "Enable debug mode"
+msgstr "Debug-Modus aktivieren"
+
+#: class-yprint-admin.php:237
+msgid "Enables detailed logging and debug information."
+msgstr "Aktiviert detaillierte Protokollierung und Debug-Informationen."
+
+#: class-yprint-admin.php:244
+msgid "Log Retention"
+msgstr "Log-Aufbewahrung"
+
+#: class-yprint-admin.php:249
+msgid "7 days"
+msgstr "7 Tage"
+
+#: class-yprint-admin.php:252
+msgid "14 days"
+msgstr "14 Tage"
+
+#: class-yprint-admin.php:255
+msgid "30 days"
+msgstr "30 Tage"
+
+#: class-yprint-admin.php:258
+msgid "60 days"
+msgstr "60 Tage"
+
+#: class-yprint-admin.php:261
+msgid "90 days"
+msgstr "90 Tage"
+
+#: class-yprint-admin.php:265
+msgid "Period for which logs should be retained."
+msgstr "Zeitraum, für den Protokolle aufbewahrt werden sollen."
+
+#: class-yprint-admin.php:272
+msgid "Save Settings"
+msgstr "Einstellungen speichern"
+
+#: class-yprint-admin.php:282
+msgid "Stripe"
+msgstr "Stripe"
+
+#: class-yprint-admin.php:283
+msgid "Stripe Settings"
+msgstr "Stripe-Einstellungen"
+
+#: class-yprint-admin.php:290
+msgid "Stripe is a secure payment platform that enables credit and debit card payments. You need a Stripe account to enable this payment method."
+msgstr "Stripe ist eine sichere Zahlungsplattform, die Kredit- und Debitkartenzahlungen ermöglicht. Du benötigst ein Stripe-Konto, um diese Zahlungsmethode zu aktivieren."
+
+#: class-yprint-admin.php:292
+msgid "Learn more about Stripe"
+msgstr "Mehr über Stripe erfahren"
+
+#: class-yprint-admin.php:301
+msgid "Enable Stripe"
+msgstr "Stripe aktivieren"
+
+#: class-yprint-admin.php:306
+msgid "Enable Stripe as payment method"
+msgstr "Stripe als Zahlungsmethode aktivieren"
+
+#: class-yprint-admin.php:315
+msgid "Test Mode"
+msgstr "Testmodus"
+
+#: class-yprint-admin.php:320
+msgid "Enable test mode"
+msgstr "Testmodus aktivieren"
+
+#: class-yprint-admin.php:323
+msgid "In test mode, no real payments are processed. Use test card data for testing."
+msgstr "Im Testmodus werden keine echten Zahlungen verarbeitet. Verwende Testeinkaufsdaten zum Testen."
+
+#: class-yprint-admin.php:330
+msgid "Production Keys (Live)"
+msgstr "Produktionsschlüssel (Live)"
+
+#: class-yprint-admin.php:337
+msgid "Public Key"
+msgstr "Öffentlicher Schlüssel"
+
+#: class-yprint-admin.php:343
+msgid "Starts with \"pk_live_\"."
+msgstr "Beginnt mit \"pk_live_\"."
+
+#: class-yprint-admin.php:350
+msgid "Secret Key"
+msgstr "Geheimer Schlüssel"
+
+#: class-yprint-admin.php:356
+msgid "Starts with \"sk_live_\"."
+msgstr "Beginnt mit \"sk_live_\"."
+
+#: class-yprint-admin.php:363
+msgid "Webhook Secret"
+msgstr "Webhook-Secret"
+
+#: class-yprint-admin.php:369
+msgid "Starts with \"whsec_\"."
+msgstr "Beginnt mit \"whsec_\"."
+
+#: class-yprint-admin.php:376
+msgid "Test Keys"
+msgstr "Testschlüssel"
+
+#: class-yprint-admin.php:383
+msgid "Test Public Key"
+msgstr "Test-Öffentlicher Schlüssel"
+
+#: class-yprint-admin.php:389
+msgid "Starts with \"pk_test_\"."
+msgstr "Beginnt mit \"pk_test_\"."
+
+#: class-yprint-admin.php:396
+msgid "Test Secret Key"
+msgstr "Test-Geheimer Schlüssel"
+
+#: class-yprint-admin.php:402
+msgid "Starts with \"sk_test_\"."
+msgstr "Beginnt mit \"sk_test_\"."
+
+#: class-yprint-admin.php:409
+msgid "Test Webhook Secret"
+msgstr "Test-Webhook-Secret"
+
+#: class-yprint-admin.php:415
+msgid "Starts with \"whsec_\"."
+msgstr "Beginnt mit \"whsec_\"."
+
+#: class-yprint-admin.php:422
+msgid "Test Connection"
+msgstr "Verbindung testen"
+
+#: class-yprint-admin.php:425
+msgid "Test Stripe Connection"
+msgstr "Verbindung zu Stripe testen"
+
+#: class-yprint-admin.php:434
+msgid "Webhook URL"
+msgstr "Webhook-URL"
+
+#: class-yprint-admin.php:437
+msgid "Add this URL in your Stripe dashboard under Developers → Webhooks."
+msgstr "Füge diese URL in deinem Stripe-Dashboard unter Entwickler → Webhooks hinzu."
+
+#: class-yprint-admin.php:440
+msgid "Create Webhook Automatically"
+msgstr "Webhook automatisch erstellen"
+
+#: class-yprint-admin.php:449
+msgid "Stripe Checkout Settings"
+msgstr "Stripe Checkout-Einstellungen"
+
+#: class-yprint-admin.php:456
+msgid "SCA Support"
+msgstr "SCA-Unterstützung"
+
+#: class-yprint-admin.php:461
+msgid "Enable Strong Customer Authentication (SCA)"
+msgstr "Starke Kundenauthentifizierung (SCA) aktivieren"
+
+#: class-yprint-admin.php:464
+msgid "Required for merchants in the EU. Enables 3D Secure and other authentication methods."
+msgstr "Erforderlich für Händler in der EU. Aktiviert 3D Secure und andere Authentifizierungsmethoden."
+
+#: class-yprint-admin.php:471
+msgid "Payment Title"
+msgstr "Zahlungstitel"
+
+#: class-yprint-admin.php:477
+msgid "Title shown to customers."
+msgstr "Der Titel, der den Kunden angezeigt wird."
+
+#: class-yprint-admin.php:484
+msgid "Payment Description"
+msgstr "Zahlungsbeschreibung"
+
+#: class-yprint-admin.php:489
+msgid "Pay securely with your credit or debit card."
+msgstr "Bezahlen Sie sicher mit Ihrer Kredit- oder Debitkarte."
+
+#: class-yprint-admin.php:491
+msgid "Description shown to customers."
+msgstr "Die Beschreibung, die den Kunden angezeigt wird."
+
+#: class-yprint-admin.php:499
+msgid "Save Stripe Settings"
+msgstr "Stripe-Einstellungen speichern"
+
+#: class-yprint-admin.php:509
+msgid "PayPal"
+msgstr "PayPal"
+
+#: class-yprint-admin.php:510
+msgid "PayPal Settings"
+msgstr "PayPal-Einstellungen"
+
+#: class-yprint-admin.php:517
+msgid "PayPal allows your customers to pay with their PayPal account or by credit card. You need a PayPal Business account to enable this payment method."
+msgstr "PayPal ermöglicht es deinen Kunden, mit ihrem PayPal-Konto oder per Kreditkarte zu bezahlen. Du benötigst ein PayPal-Geschäftskonto, um diese Zahlungsmethode zu aktivieren."
+
+#: class-yprint-admin.php:519
+msgid "Learn more about PayPal"
+msgstr "Mehr über PayPal erfahren"
+
+#: class-yprint-admin.php:528
+msgid "Enable PayPal"
+msgstr "PayPal aktivieren"
+
+#: class-yprint-admin.php:533
+msgid "Enable PayPal as payment method"
+msgstr "PayPal als Zahlungsmethode aktivieren"
+
+#: class-yprint-admin.php:542
+msgid "Test Mode"
+msgstr "Testmodus"
+
+#: class-yprint-admin.php:547
+msgid "Enable test mode (Sandbox)"
+msgstr "Testmodus aktivieren (Sandbox)"
+
+#: class-yprint-admin.php:550
+msgid "In test mode, no real payments are processed. Use PayPal Sandbox data for testing."
+msgstr "Im Testmodus werden keine echten Zahlungen verarbeitet. Verwende PayPal-Sandboxdaten zum Testen."
+
+#: class-yprint-admin.php:557
+msgid "Production Keys (Live)"
+msgstr "Produktionsschlüssel (Live)"
+
+#: class-yprint-admin.php:564
+msgid "Client ID"
+msgstr "Client ID"
+
+#: class-yprint-admin.php:574
+msgid "Secret Key"
+msgstr "Secret Key"
+
+#: class-yprint-admin.php:584
+msgid "Webhook ID"
+msgstr "Webhook ID"
+
+#: class-yprint-admin.php:594
+msgid "Test Keys (Sandbox)"
+msgstr "Testschlüssel (Sandbox)"
+
+#: class-yprint-admin.php:601
+msgid "Sandbox Client ID"
+msgstr "Sandbox Client ID"
+
+#: class-yprint-admin.php:611
+msgid "Sandbox Secret Key"
+msgstr "Sandbox Secret Key"
+
+#: class-yprint-admin.php:621
+msgid "Sandbox Webhook ID"
+msgstr "Sandbox Webhook ID"
+
+#: class-yprint-admin.php:631
+msgid "Test Connection"
+msgstr "Verbindung testen"
+
+#: class-yprint-admin.php:634
+msgid "Test PayPal Connection"
+msgstr "Verbindung zu PayPal testen"
+
+#: class-yprint-admin.php:643
+msgid "Webhook URL"
+msgstr "Webhook-URL"
+
+#: class-yprint-admin.php:646
+msgid "Add this URL in your PayPal dashboard under Settings → Webhook settings."
+msgstr "Füge diese URL in deinem PayPal-Dashboard unter Einstellungen → Webhook-Einstellungen hinzu."
+
+#: class-yprint-admin.php:649
+msgid "Create Webhook Automatically"
+msgstr "Webhook automatisch erstellen"
+
+#: class-yprint-admin.php:658
+msgid "PayPal Checkout Settings"
+msgstr "PayPal Checkout-Einstellungen"
+
+#: class-yprint-admin.php:665
+msgid "Smart Buttons"
+msgstr "Smart Buttons"
+
+#: class-yprint-admin.php:670
+msgid "Enable PayPal Smart Payment Buttons"
+msgstr "PayPal Smart Payment Buttons aktivieren"
+
+#: class-yprint-admin.php:673
+msgid "Modern, customizable PayPal buttons for a better checkout experience."
+msgstr "Moderne, anpassbare PayPal-Buttons für ein besseres Checkout-Erlebnis."
+
+#: class-yprint-admin.php:680
+msgid "Payment Title"
+msgstr "Zahlungstitel"
+
+#: class-yprint-admin.php:686
+msgid "Title shown to customers."
+msgstr "Der Titel, der den Kunden angezeigt wird."
+
+#: class-yprint-admin.php:693
+msgid "Payment Description"
+msgstr "Zahlungsbeschreibung"
+
+#: class-yprint-admin.php:698
+msgid "Pay quickly and securely with your PayPal account."
+msgstr "Bezahlen Sie schnell und sicher mit Ihrem PayPal-Konto."
+
+#: class-yprint-admin.php:700
+msgid "Description shown to customers."
+msgstr "Die Beschreibung, die den Kunden angezeigt wird."
+
+#: class-yprint-admin.php:708
+msgid "Save PayPal Settings"
+msgstr "PayPal-Einstellungen speichern"
+
+#: class-yprint-admin.php:718
+msgid "SEPA"
+msgstr "SEPA"
+
+#: class-yprint-admin.php:719
+msgid "SEPA Settings"
+msgstr "SEPA-Einstellungen"
+
+#: class-yprint-admin.php:726
+msgid "SEPA (Single Euro Payments Area) allows your customers to pay via direct debit. This payment method is mainly available in Europe."
+msgstr "SEPA (Single Euro Payments Area) ermöglicht es deinen Kunden, per Lastschrift zu bezahlen. Diese Zahlungsmethode ist hauptsächlich in Europa verfügbar."
+
+#: class-yprint-admin.php:734
+msgid "Enable SEPA"
+msgstr "SEPA aktivieren"
+
+#: class-yprint-admin.php:739
+msgid "Enable SEPA Direct Debit as payment method"
+msgstr "SEPA-Lastschrift als Zahlungsmethode aktivieren"
+
+#: class-yprint-admin.php:748
+msgid "Test Mode"
+msgstr "Testmodus"
+
+#: class-yprint-admin.php:753
+msgid "Enable test mode"
+msgstr "Testmodus aktivieren"
+
+#: class-yprint-admin.php:756
+msgid "In test mode, no real payments are processed."
+msgstr "Im Testmodus werden keine echten Zahlungen verarbeitet."
+
+#: class-yprint-admin.php:763
+msgid "API Key"
+msgstr "API-Schlüssel"
+
+#: class-yprint-admin.php:773
+msgid "API Secret"
+msgstr "API-Secret"
+
+#: class-yprint-admin.php:783
+msgid "Creditor ID"
+msgstr "Gläubiger-ID"
+
+#: class-yprint-admin.php:789
+msgid "Your SEPA creditor ID (e.g. DE98ZZZ09999999999)."
+msgstr "Deine SEPA-Gläubiger-ID (z.B. DE98ZZZ09999999999)."
+
+#: class-yprint-admin.php:796
+msgid "Company Name"
+msgstr "Firmenname"
+
+#: class-yprint-admin.php:802
+msgid "Your company name for SEPA mandates."
+msgstr "Name deines Unternehmens für SEPA-Mandate."
+
+#: class-yprint-admin.php:809
+msgid "SEPA Checkout Settings"
+msgstr "SEPA-Checkout-Einstellungen"
+
+#: class-yprint-admin.php:816
+msgid "Mandate Type"
+msgstr "Mandatstyp"
+
+#: class-yprint-admin.php:821
+msgid "One-off"
+msgstr "Einmalig"
+
+#: class-yprint-admin.php:824
+msgid "Recurring"
+msgstr "Wiederkehrend"
+
+#: class-yprint-admin.php:828
+msgid "Type of SEPA mandate."
+msgstr "Art des SEPA-Mandats."
+
+#: class-yprint-admin.php:835
+msgid "Mandate Text"
+msgstr "Mandatstext"
+
+#: class-yprint-admin.php:840
+msgid "I authorize {company} to collect payments from my account via SEPA Direct Debit. At the same time, I instruct my bank to honor the direct debits drawn by {company} on my account. Note: I can request a refund of the debited amount within eight weeks, starting from the debit date. The terms and conditions agreed with my bank apply."
+msgstr "Ich ermächtige {company}, Zahlungen von meinem Konto mittels SEPA-Lastschrift einzuziehen. Zugleich weise ich mein Kreditinstitut an, die von {company} auf mein Konto gezogenen Lastschriften einzulösen. Hinweis: Ich kann innerhalb von acht Wochen, beginnend mit dem Belastungsdatum, die Erstattung des belasteten Betrages verlangen. Es gelten dabei die mit meinem Kreditinstitut vereinbarten Bedingungen."
+
+#: class-yprint-admin.php:842
+msgid "Text shown to customers. Use {company} as placeholder for your company name."
+msgstr "Der Text, der dem Kunden angezeigt wird. Verwende {company} als Platzhalter für deinen Firmennamen."
+
+#: class-yprint-admin.php:849
+msgid "Payment Title"
+msgstr "Zahlungstitel"
+
+#: class-yprint-admin.php:855
+msgid "Title shown to customers."
+msgstr "Der Titel, der den Kunden angezeigt wird."
+
+#: class-yprint-admin.php:862
+msgid "Payment Description"
+msgstr "Zahlungsbeschreibung"
+
+#: class-yprint-admin.php:867
+msgid "Pay conveniently via direct debit from your bank account."
+msgstr "Bezahlen Sie bequem per Lastschrift von Ihrem Bankkonto."
+
+#: class-yprint-admin.php:869
+msgid "Description shown to customers."
+msgstr "Die Beschreibung, die den Kunden angezeigt wird."
+
+#: class-yprint-admin.php:877
+msgid "Save SEPA Settings"
+msgstr "SEPA-Einstellungen speichern"
+
+#: class-yprint-admin.php:887
+msgid "Bank Transfer"
+msgstr "Banküberweisung"
+
+#: class-yprint-admin.php:888
+msgid "Bank Transfer Settings"
+msgstr "Banküberweisung-Einstellungen"
+
+#: class-yprint-admin.php:895
+msgid "Bank transfer allows your customers to transfer money directly to your bank account. The order is processed after payment is received."
+msgstr "Die Banküberweisung ermöglicht es deinen Kunden, direkt auf dein Bankkonto zu überweisen. Die Bestellung wird erst nach Zahlungseingang bearbeitet."
+
+#: class-yprint-admin.php:903
+msgid "Enable Bank Transfer"
+msgstr "Banküberweisung aktivieren"
+
+#: class-yprint-admin.php:908
+msgid "Enable Bank Transfer as payment method"
+msgstr "Banküberweisung als Zahlungsmethode aktivieren"
+
+#: class-yprint-admin.php:917
+msgid "Account Holder"
+msgstr "Kontoinhaber"
+
+#: class-yprint-admin.php:927
+msgid "Bank"
+msgstr "Bank"
+
+#: class-yprint-admin.php:937
+msgid "IBAN"
+msgstr "IBAN"
+
+#: class-yprint-admin.php:947
+msgid "BIC"
+msgstr "BIC"
+
+#: class-yprint-admin.php:957
+msgid "Payment Instructions"
+msgstr "Zahlungsanweisungen"
+
+#: class-yprint-admin.php:962
+msgid "Please transfer the amount to the following account. Use your order number as reference so we can assign your payment."
+msgstr "Bitte überweisen Sie den Betrag auf das folgende Konto. Verwenden Sie Ihre Bestellnummer als Verwendungszweck, damit wir Ihre Zahlung zuordnen können."
+
+#: class-yprint-admin.php:964
+msgid "Instructions for customers on how to complete the transfer."
+msgstr "Anweisungen für die Kunden, wie sie die Überweisung durchführen sollen."
+
+#: class-yprint-admin.php:971
+msgid "Payment Title"
+msgstr "Zahlungstitel"
+
+#: class-yprint-admin.php:977
+msgid "Title shown to customers."
+msgstr "Der Titel, der den Kunden angezeigt wird."
+
+#: class-yprint-admin.php:984
+msgid "Payment Description"
+msgstr "Zahlungsbeschreibung"
+
+#: class-yprint-admin.php:989
+msgid "Pay via bank transfer. Your order will be processed after payment is received."
+msgstr "Bezahlen Sie per Banküberweisung. Ihre Bestellung wird nach Zahlungseingang bearbeitet."
+
+#: class-yprint-admin.php:991
+msgid "Description shown to customers."
+msgstr "Die Beschreibung, die den Kunden angezeigt wird."
+
+#: class-yprint-admin.php:999
+msgid "Save Bank Transfer Settings"
+msgstr "Banküberweisung-Einstellungen speichern"
+
+#: class-yprint-admin.php:1009
+msgid "Webhooks"
+msgstr "Webhooks"
+
+#: class-yprint-admin.php:1013
+msgid "Webhooks allow payment providers to communicate with your shop and send payment status updates."
+msgstr "Webhooks ermöglichen es Zahlungsanbietern, mit deinem Shop zu kommunizieren und Zahlungsstatusaktualisierungen zu senden."
+
+#: class-yprint-admin.php:1198
+msgid "Features"
+msgstr "Features"
+
+#: class-yprint-admin.php:1202
+msgid "Feature Flags allow you to enable or disable specific features."
+msgstr "Feature-Flags ermöglichen es, bestimmte Funktionen gezielt zu aktivieren oder zu deaktivieren."
+
+#: class-yprint-admin.php:1265
+msgid "Reset to Default Values"
+msgstr "Zurücksetzen auf Standardwerte"
+
+#: class-yprint-admin.php:1275
+msgid "System Status"
+msgstr "System-Status"
+
+#: class-yprint-admin.php:1278
+msgid "Plugin Information"
+msgstr "Plugin-Informationen"
+
+#: class-yprint-admin.php:1400
+msgid "Clear Plugin Cache"
+msgstr "Plugin-Cache leeren"
+
+#: class-yprint-admin.php:1403
+msgid "Run Diagnostics"
+msgstr "Diagnose ausführen"
+
+#: class-yprint-admin.php:1428
+msgid "Log Files"
+msgstr "Log-Dateien"
+
+#: class-yprint-admin.php:1433
+msgid "No log files found."
+msgstr "Keine Log-Dateien gefunden."
+
+#: class-yprint-admin.php:1438
+msgid "Available Logs"
+msgstr "Verfügbare Logs"
+
+#: class-yprint-admin.php:1444
+msgid "Delete"
+msgstr "Löschen"
+
+#: class-yprint-admin.php:1453
+msgid "Download"
+msgstr "Herunterladen"
+
+#: class-yprint-admin.php:1456
+msgid "Refresh"
+msgstr "Aktualisieren"
+
+#: class-yprint-admin.php:1467
+msgid "Select a log file from the list to view its contents."
+msgstr "Wähle eine Log-Datei aus der Liste aus, um den Inhalt anzuzeigen."
+
+#: class-yprint-admin.php:1476
+msgid "Log Settings"
+msgstr "Log-Einstellungen"
+
+#: class-yprint-admin.php:1483
+msgid "Log Level"
+msgstr "Log-Level"
+
+#: class-yprint-admin.php:1487
+msgid "Errors (minimal)"
+msgstr "Fehler (minimal)"
+
+#: class-yprint-admin.php:1490
+msgid "Warnings"
+msgstr "Warnungen"
+
+#: class-yprint-admin.php:1493
+msgid "Info"
+msgstr "Infos"
+
+#: class-yprint-admin.php:1496
+msgid "Debug (verbose)"
+msgstr "Debug (ausführlich)"
+
+#: class-yprint-admin.php:1500
+msgid "Higher log levels record more information."
+msgstr "Je höher der Log-Level, desto mehr Informationen werden protokolliert."
+
+#: class-yprint-admin.php:1508
+msgid "Save Log Settings"
+msgstr "Log-Einstellungen speichern"
+
+#: class-yprint-admin.php:1511
+msgid "Delete All Logs"
+msgstr "Alle Logs löschen"
+
+#: templates/checkout/payment-methods.php:12
+msgid "Payment Methods"
+msgstr "Zahlungsmethoden"
+
+#: templates/checkout/payment-methods.php:23
+msgid "Select a payment method"
+msgstr "Wähle eine Zahlungsmethode"
+
+#: templates/checkout/shipping-address.php:12
+msgid "Shipping Address"
+msgstr "Lieferadresse"
+
+#: templates/checkout/shipping-address.php:17
+msgid "First Name"
+msgstr "Vorname"
+
+#: templates/checkout/shipping-address.php:23
+msgid "Last Name"
+msgstr "Nachname"
+
+#: templates/checkout/shipping-address.php:29
+msgid "Street Address"
+msgstr "Straße und Hausnummer"
+
+#: templates/checkout/shipping-address.php:35
+msgid "Apartment, suite, unit, etc. (optional)"
+msgstr "Zusatz, Wohnung, Etage etc. (optional)"
+
+#: templates/checkout/shipping-address.php:41
+msgid "Postcode / ZIP"
+msgstr "Postleitzahl"
+
+#: templates/checkout/shipping-address.php:47
+msgid "Town / City"
+msgstr "Stadt"
+
+#: templates/checkout/shipping-address.php:53
+msgid "Country"
+msgstr "Land"
+
+#: templates/checkout/shipping-address.php:67
+msgid "Phone"
+msgstr "Telefon"
+
+#: templates/checkout/shipping-address.php:73
+msgid "Email Address"
+msgstr "E-Mail-Adresse"
+
+#: templates/checkout/different-billing.php:12
+msgid "Different Billing Address"
+msgstr "Abweichende Rechnungsadresse"
+
+#: templates/checkout/different-billing.php:16
+msgid "Use a different billing address"
+msgstr "Verwende eine abweichende Rechnungsadresse"
+
+#: templates/checkout/different-billing.php:25
+msgid "Billing Address"
+msgstr "Rechnungsadresse"
+
+#: templates/checkout/order-summary.php:12
+msgid "Order Summary"
+msgstr "Bestellübersicht"
+
+#: templates/checkout/order-summary.php:21
+msgid "Product"
+msgstr "Produkt"
+
+#: templates/checkout/order-summary.php:22
+msgid "Price"
+msgstr "Preis"
+
+#: templates/checkout/order-summary.php:23
+msgid "Quantity"
+msgstr "Menge"
+
+#: templates/checkout/order-summary.php:24
+msgid "Subtotal"
+msgstr "Zwischensumme"
+
+#: templates/checkout/order-summary.php:65
+msgid "Remove"
+msgstr "Entfernen"
+
+#: templates/checkout/order-summary.php:93
+msgid "Your cart is empty."
+msgstr "Dein Warenkorb ist leer."
+
+#: templates/checkout/order-summary.php:108
+msgid "Subtotal"
+msgstr "Zwischensumme"
+
+#: templates/checkout/order-summary.php:108
+msgid "Subtotal"
+msgstr "Zwischensumme"
+
+#: templates/checkout/order-summary.php:116
+msgid "Shipping"
+msgstr "Versand"
+
+#: templates/checkout/order-summary.php:125
+msgid "Tax"
+msgstr "Steuer"
+
+#: templates/checkout/order-summary.php:134
+msgid "Discount"
+msgstr "Rabatt"
+
+#: templates/checkout/order-summary.php:143
+msgid "Total"
+msgstr "Gesamtsumme"
+
+#: templates/checkout/coupon-buy.php:15
+msgid "Have a coupon?"
+msgstr "Hast du einen Gutschein?"
+
+#: templates/checkout/coupon-buy.php:22
+msgid "Coupon code"
+msgstr "Gutscheincode"
+
+#: templates/checkout/coupon-buy.php:23
+msgid "Apply"
+msgstr "Anwenden"
+
+#: templates/checkout/coupon-buy.php:36
+msgid "I have read and agree to the website's privacy policy."
+msgstr "Ich habe die Datenschutzerklärung der Website gelesen und stimme ihr zu."
+
+#: templates/checkout/coupon-buy.php:42
+msgid "Buy Now"
+msgstr "Jetzt kaufen"
+
+#: templates/paypal-return.php:24
+msgid "Payment cancelled"
+msgstr "Zahlung abgebrochen"
+
+#: templates/paypal-return.php:25
+msgid "The PayPal payment was cancelled. Please try again or choose another payment method."
+msgstr "Die PayPal-Zahlung wurde abgebrochen. Bitte versuche es erneut oder wähle eine andere Zahlungsmethode."
+
+#: templates/paypal-return.php:26
+msgid "Back to Checkout"
+msgstr "Zurück zum Checkout"
+
+#: templates/paypal-return.php:30
+msgid "Processing payment"
+msgstr "Zahlung wird verarbeitet"
+
+#: templates/paypal-return.php:31
+msgid "Your PayPal payment is being processed. Please wait a moment..."
+msgstr "Ihre PayPal-Zahlung wird verarbeitet. Bitte warten Sie einen Moment..."
+
+#: templates/stripe-return.php:21
+msgid "Payment successful"
+msgstr "Zahlung erfolgreich"
+
+#: templates/stripe-return.php:22
+msgid "Your payment was successfully processed. You will be redirected shortly..."
+msgstr "Ihre Zahlung wurde erfolgreich verarbeitet. Sie werden in Kürze weitergeleitet..."
+
+#: templates/stripe-return.php:25
+msgid "Payment not completed"
+msgstr "Zahlung nicht abgeschlossen"
+
+#: templates/stripe-return.php:26
+msgid "There was an error processing your payment."
+msgstr "Bei der Verarbeitung Ihrer Zahlung ist ein Fehler aufgetreten."
+
+#: templates/stripe-return.php:27
+msgid "Back to Checkout"
+msgstr "Zurück zum Checkout"
+
+#: templates/thank-you.php:18
+msgid "Thank you for your order!"
+msgstr "Vielen Dank für Ihre Bestellung!"
+
+#: templates/thank-you.php:19
+msgid "Your order has been received and is now being processed."
+msgstr "Ihre Bestellung wurde erhalten und wird nun bearbeitet."
+
+#: templates/thank-you.php:22
+msgid "Order Details"
+msgstr "Bestelldetails"
+
+#: templates/thank-you.php:27
+msgid "Order Number:"
+msgstr "Bestellnummer:"
+
+#: templates/thank-you.php:31
+msgid "Date:"
+msgstr "Datum:"
+
+#: templates/thank-you.php:35
+msgid "Total:"
+msgstr "Gesamtsumme:"
+
+#: templates/thank-you.php:39
+msgid "Payment Method:"
+msgstr "Zahlungsmethode:"
+
+#: templates/thank-you.php:47
+msgid "We've sent you an email with your order details and confirmation."
+msgstr "Wir haben Ihnen eine E-Mail mit Ihren Bestelldaten und der Bestätigung gesendet."
+
+#: templates/thank-you.php:53
+msgid "Continue Shopping"
+msgstr "Weiter einkaufen"
+
+#: class-yprint-stripe.php:171
+msgid "Order at"
+msgstr "Bestellung bei"
+
+#: class-yprint-stripe.php:287
+msgid "Payment via Stripe confirmed (Charge ID: %s)"
+msgstr "Zahlung über Stripe bestätigt (Charge ID: %s)"
+
+#: class-yprint-stripe.php:428
+msgid "Stripe payment failed: %s"
+msgstr "Stripe-Zahlung fehlgeschlagen: %s"
+
+#: class-yprint-stripe.php:465
+msgid "Stripe payment fully refunded."
+msgstr "Stripe-Zahlung vollständig zurückerstattet."
+
+#: class-yprint-stripe.php:473
+msgid "Stripe payment partially refunded: %s of %s"
+msgstr "Stripe-Zahlung teilweise zurückerstattet: %s von %s"
+
+#: class-yprint-stripe.php:481
+msgid "Stripe partial refund (Webhook)"
+msgstr "Stripe Teilrückerstattung (Webhook)"
+
+#: class-yprint-stripe.php:551
+msgid "Payment requires further authentication"
+msgstr "Zahlung erfordert weitere Authentifizierung"
+
+#: class-yprint-stripe.php:558
+msgid "Payment was not successfully completed (Status: %s)"
+msgstr "Zahlung wurde nicht erfolgreich abgeschlossen (Status: %s)"
+
+#: class-yprint-paypal.php:219
+msgid "Payment via PayPal confirmed (Transaction ID: %s)"
+msgstr "Zahlung über PayPal bestätigt (Transaktions-ID: %s)"
+
+#: class-yprint-paypal.php:331
+msgid "PayPal payment was refunded."
+msgstr "PayPal-Zahlung wurde zurückerstattet."
+
+#: class-yprint-paypal.php:339
+msgid "PayPal order approved, waiting for payment completion"
+msgstr "PayPal-Bestellung genehmigt, warten auf Zahlungsabschluss"
+
+#: class-yprint-paypal.php:375
+msgid "Order cannot be found for PayPal order ID: %s"
+msgstr "Bestellung kann für PayPal-Bestellnummer nicht gefunden werden: %s"
+
+#: class-yprint-sepa.php:201
+msgid "SEPA mandate issued: %s"
+msgstr "SEPA-Lastschriftmandat erteilt: %s"
+
+#: class-yprint-sepa.php:267
+msgid "Hello %s %s,\n\nThank you for your order with %s.\n\nYou have granted us a SEPA direct debit mandate. Here are the details:\n\nMandate reference: %s\nIBAN: %s\nAccount holder: %s\nAmount: %s\nDate: %s\n\nThe amount will be debited from your account in the next few days.\n\nKind regards,\nYour %s Team"
+msgstr "Hallo %s %s,\n\nVielen Dank für Ihre Bestellung bei %s.\n\nSie haben uns ein SEPA-Lastschriftmandat erteilt. Hier sind die Details:\n\nMandatsreferenz: %s\nIBAN: %s\nKontoinhaber: %s\nBetrag: %s\nDatum: %s\n\nDer Betrag wird in den nächsten Tagen von Ihrem Konto abgebucht.\n\nMit freundlichen Grüßen\nIhr %s Team"
+
+#: class-yprint-sepa.php:301
+msgid "SEPA Mandate Confirmation"
+msgstr "SEPA-Mandatsbestätigung"
+
+#: class-yprint-bank-transfer.php:119
+msgid "Awaiting bank transfer. Please use these details for payment:\n\nAmount: %s\nAccount Holder: %s\nBank: %s\nIBAN: %s\nBIC: %s\nReference: Order #%s"
+msgstr "Warten auf Banküberweisung. Bitte verwenden Sie diese Daten für die Zahlung:\n\nBetrag: %s\nKontoinhaber: %s\nBank: %s\nIBAN: %s\nBIC: %s\nVerwendungszweck: Bestellung #%s"
+
+#: class-yprint-order.php:187
+msgid "Payment pending"
+msgstr "Zahlung ausstehend"
+
+#: class-yprint-order.php:198
+msgid "Order created from YPrint Payment checkout"
+msgstr "Bestellung über YPrint Payment Checkout erstellt"
+
+#: class-yprint-order.php:239
+msgid "Credit Card"
+msgstr "Kreditkarte"
+
+#: class-yprint-order.php:242
+msgid "PayPal"
+msgstr "PayPal"
+
+#: class-yprint-order.php:245
+msgid "SEPA Direct Debit"
+msgstr "SEPA-Lastschrift"
+
+#: class-yprint-order.php:248
+msgid "Bank Transfer"
+msgstr "Banküberweisung"
+
+#: class-yprint-order.php:251
+msgid "Unknown payment method"
+msgstr "Unbekannte Zahlungsmethode"
+
+#: class-yprint-feature-flags.php:92
+msgid "Enables Stripe payment gateway"
+msgstr "Aktiviert Stripe als Zahlungsmethode"
+
+#: class-yprint-feature-flags.php:93
+msgid "Enables Strong Customer Authentication (SCA) for EU payments"
+msgstr "Aktiviert die Starke Kundenauthentifizierung (SCA) für EU-Zahlungen"
+
+#: class-yprint-feature-flags.php:94
+msgid "Enables the Unified Payment Element (new Stripe UI)"
+msgstr "Aktiviert das Unified Payment Element (neue Stripe-UI)"
+
+#: class-yprint-feature-flags.php:95
+msgid "Enables webhook support for Stripe"
+msgstr "Aktiviert Webhook-Unterstützung für Stripe"
+
+#: class-yprint-feature-flags.php:98
+msgid "Enables PayPal payment gateway"
+msgstr "Aktiviert PayPal als Zahlungsmethode"
+
+#: class-yprint-feature-flags.php:99
+msgid "Enables Smart Payment Buttons for PayPal"
+msgstr "Aktiviert Smart Payment Buttons für PayPal"
+
+#: class-yprint-feature-flags.php:100
+msgid "Enables webhook support for PayPal"
+msgstr "Aktiviert Webhook-Unterstützung für PayPal"
+
+#: class-yprint-feature-flags.php:103
+msgid "Enables SEPA Direct Debit payment method"
+msgstr "Aktiviert die SEPA-Lastschrift-Zahlungsmethode"
+
+#: class-yprint-feature-flags.php:104
+msgid "Enables instant IBAN validation"
+msgstr "Aktiviert sofortige IBAN-Validierung"
+
+#: class-yprint-feature-flags.php:107
+msgid "Enables Bank Transfer payment method"
+msgstr "Aktiviert die Banküberweisung-Zahlungsmethode"
+
+#: class-yprint-feature-flags.php:108
+msgid "Enables Klarna payment method (future)"
+msgstr "Aktiviert die Klarna-Zahlungsmethode (zukünftig)"
+
+#: class-yprint-feature-flags.php:109
+msgid "Enables Sofort payment method (future)"
+msgstr "Aktiviert die Sofort-Zahlungsmethode (zukünftig)"
+
+#: class-yprint-feature-flags.php:112
+msgid "Enables responsive checkout"
+msgstr "Aktiviert den responsiven Checkout"
+
+#: class-yprint-feature-flags.php:113
+msgid "Enables enhanced form validation"
+msgstr "Aktiviert verbesserte Formularvalidierung"
+
+#: class-yprint-feature-flags.php:114
+msgid "Enables address autofill"
+msgstr "Aktiviert die automatische Adressvervollständigung"
+
+#: class-yprint-feature-flags.php:117
+msgid "Enables advanced reporting"
+msgstr "Aktiviert erweiterte Berichterstellung"
+
+#: class-yprint-feature-flags.php:118
+msgid "Enables transaction logs"
+msgstr "Aktiviert Transaktionsprotokolle"
+
+#: class-yprint-feature-flags.php:119
+msgid "Enables debug mode with detailed logging"
+msgstr "Aktiviert den Debug-Modus mit ausführlicher Protokollierung"
+
+#: class-yprint-feature-flags.php:122
+msgid "Enables fraud detection"
+msgstr "Aktiviert Betrugserkennung"
+
+#: class-yprint-feature-flags.php:123
+msgid "Enables CAPTCHA protection for checkout"
+msgstr "Aktiviert CAPTCHA-Schutz für Checkout"
+
+#: class-yprint-feature-flags.php:126
+msgid "Enables AJAX cart updates"
+msgstr "Aktiviert AJAX-Warenkorb-Updates"
+
+#: class-yprint-feature-flags.php:127
+msgid "Enables lazy loading of resources"
+msgstr "Aktiviert Lazy Loading von Ressourcen"
+
+#: class-yprint-api.php:362
+msgid "API Error: %s - %s"
+msgstr "API-Fehler: %s - %s"
+
+#: class-yprint-api.php:452
+msgid "Unknown error"
+msgstr "Unbekannter Fehler"
+
+#: class-yprint-api.php:466
+msgid "An error occurred while communicating with the payment provider."
+msgstr "Ein Fehler ist bei der Kommunikation mit dem Zahlungsdienstleister aufgetreten."
+
+#: yprint-checkout.js:289
+msgid "Please provide a complete shipping address"
+msgstr "Bitte gib eine vollständige Lieferadresse an"
+
+#: yprint-checkout.js:295
+msgid "Please select a payment method"
+msgstr "Bitte wähle eine Zahlungsmethode aus"
+
+#: yprint-checkout.js:302
+msgid "Please provide a complete billing address"
+msgstr "Bitte gib eine vollständige abweichende Rechnungsadresse an"
+
+#: yprint-checkout.js:308
+msgid "Please accept the privacy policy"
+msgstr "Bitte akzeptiere die Datenschutzerklärung"
+
+#: yprint-checkout.js:334
+msgid "Please enter a coupon code."
+msgstr "Bitte gib einen Gutschein-Code ein."
+
+#: yprint-checkout.js:361
+msgid "Coupon successfully applied."
+msgstr "Gutschein wurde erfolgreich angewendet."
+
+#: yprint-checkout.js:371
+msgid "Coupon could not be applied."
+msgstr "Gutschein konnte nicht angewendet werden."
+
+#: yprint-checkout.js:377
+msgid "An error occurred. Please try again."
+msgstr "Ein Fehler ist aufgetreten. Bitte versuche es erneut."
+
+#: yprint-checkout.js:671
+msgid "Your cart is empty."
+msgstr "Dein Warenkorb ist leer."
+
+#: yprint-checkout.js:725
+msgid "Connection error while preparing order"
+msgstr "Verbindungsfehler bei der Vorbereitung der Bestellung"
+
+#: yprint-checkout.js:813
+msgid "Unknown payment method: "
+msgstr "Unbekannte Zahlungsmethode: "
+
+#: yprint-checkout.js:822
+msgid "Payment gateway not initialized: "
+msgstr "Zahlungs-Gateway nicht initialisiert: "
+
+#: yprint-checkout.js:859
+msgid "Connection error while finalizing order"
+msgstr "Verbindungsfehler bei der Finalisierung der Bestellung"
+
+#: yprint-checkout.js:970
+msgid "Stripe not initialized"
+msgstr "Stripe nicht initialisiert"
+
+#: yprint-checkout.js:994
+msgid "Stripe initialization failed"
+msgstr "Stripe-Initialisierung fehlgeschlagen"
+
+#: yprint-checkout.js:1002
+msgid "Connection error initializing payment"
+msgstr "Verbindungsfehler bei der Zahlungsinitialisierung"
+
+#: yprint-checkout.js:1049
+msgid "Payment cancelled"
+msgstr "Zahlung abgebrochen"
+
+#: yprint-checkout.js:1114
+msgid "PayPal payment cancelled"
+msgstr "PayPal-Zahlung wurde abgebrochen"
+
+#: yprint-checkout.js:1132
+msgid "PayPal payment error: "
+msgstr "Fehler bei der PayPal-Zahlung: "
+
+#: yprint-checkout.js:1144
+msgid "Error loading PayPal: "
+msgstr "Fehler beim Laden von PayPal: "
+
+#: yprint-checkout.js:1163
+msgid "Please enter a valid IBAN"
+msgstr "Bitte gib eine gültige IBAN ein"
+
+#: yprint-checkout.js:1169
+msgid "Please enter the account holder name"
+msgstr "Bitte gib den Namen des Kontoinhabers an"
+
+#: yprint-checkout.js:1186
+msgid "SEPA payment could not be processed."
+msgstr "SEPA-Zahlung konnte nicht verarbeitet werden."
+
+#: yprint-checkout.js:1192
+msgid "Error processing SEPA payment."
+msgstr "Fehler bei der SEPA-Zahlungsverarbeitung."
